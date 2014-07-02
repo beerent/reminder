@@ -59,8 +59,7 @@ public class server extends Thread{
 		while (true){
 			System.out.println("listening for connection...");
 			sock = this.serverSock.accept();
-			server serv = new server(sock);
-			serv.start();
+			messageManager mm = new messageManager(sock);
 		}
 	}
 
